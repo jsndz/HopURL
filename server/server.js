@@ -22,7 +22,7 @@ connectDB();
 app.use(
   cors({
     origin:
-      process.env.NODE_ENV === "production" ? ["https://yourdomain.com"] : true,
+      process.env.NODE_ENV === "production" ? process.env.CLIENT_URL : true,
     credentials: true,
   })
 );
